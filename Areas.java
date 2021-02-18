@@ -1,14 +1,20 @@
 abstract class Shape
 {
   int dim1,dim2;
+  Shape(int a, int b)
+  {
+    dim1 = a;
+    dim2 = b;
+  }
   abstract void printArea();
 }
 class Rectangle extends Shape
 {
   public Rectangle(int a, int b)
   {
-    dim1 = a;
-    dim2 = b;
+    // dim1 = a;
+    // dim2 = b;
+    super(a,b);
   }
   void printArea()
   {
@@ -20,8 +26,9 @@ class Triangle extends Shape
 {
   public Triangle(int a, int b)
   {
-    dim1 = a;
-    dim2 = b;
+    // dim1 = a;
+    // dim2 = b;
+    super(a,b);
   }
   void printArea()
   {
@@ -33,7 +40,8 @@ class Circle extends Shape
 {
   public Circle(int a)
   {
-    dim1 = a;
+    // dim1 = a;
+    super(a,a);
   }
   void printArea()
   {
